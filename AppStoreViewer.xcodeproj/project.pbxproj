@@ -89,6 +89,7 @@
 		A78E827D217771A9007C5FB5 /* DataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetching.swift; sourceTree = "<group>"; };
 		A78E8280217771D1007C5FB5 /* AppStoreRessource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreRessource.swift; sourceTree = "<group>"; };
 		A7FA26FC218755080021ECCB /* playgroundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playgroundController.swift; sourceTree = "<group>"; };
+		A7FA26FF218758EB0021ECCB /* UberEat.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UberEat.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +232,7 @@
 				A78E824921776C5F007C5FB5 /* AppStoreTopApps.playground */,
 				A77238E3217779710065B650 /* Blank.playground */,
 				A7304C112180CB5C003CAE94 /* AppDetail.playground */,
+				A7FA26FF218758EB0021ECCB /* UberEat.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";

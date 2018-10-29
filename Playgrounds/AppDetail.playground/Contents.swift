@@ -5,4 +5,6 @@ import UIKit
 
 let appsCoordinator = AppsViewCoordinator()
 
-PlaygroundPage.current.liveView = appsCoordinator
+let (parent, child) = playgroundControllers(device: .phone4_7inch, orientation: .portrait, child: appsCoordinator)
+
+PlaygroundPage.current.liveView = parent
