@@ -2,8 +2,6 @@
 import PlaygroundSupport
 import UIKit
 
-
-
 public class SectionTableViewController: UITableViewController {
     // MARK: - Variables
 
@@ -46,10 +44,10 @@ public class SectionTableViewController: UITableViewController {
     }
 }
 
-
 public protocol ScrollHeaderControllerDelegate: class {
     func scrollHeaderController(scrollHeaderController: ScrollHeaderController, didTapItemAt index: Int)
 }
+
 public class ScrollHeaderController: UIViewController {
     // MARK: - Public Variables
 
@@ -79,7 +77,6 @@ public class ScrollHeaderController: UIViewController {
 
     public var selectedItemIndex: Int = 0 {
         didSet {
-
             guard let label = stackView.arrangedSubviews[selectedItemIndex] as? UILabel else { return }
 
             label.backgroundColor = UIColor.black
@@ -134,6 +131,8 @@ public class ScrollHeaderController: UIViewController {
             let index = stackView.arrangedSubviews.index(of: label)
         else { return }
 
+
+       self.selectedItemIndex = index
         delegate?.scrollHeaderController(scrollHeaderController: self, didTapItemAt: index)
         print(index)
     }
@@ -141,6 +140,8 @@ public class ScrollHeaderController: UIViewController {
 
 public class UberCoordinator: UIViewController, UITableViewDelegate, ScrollHeaderControllerDelegate {
     // MARK: - variables
+
+    private var section = 0
 
     private let hardCodedData = [
         ["Section 1": ["Ligne 1", "Ligne 2", "Ligne 3"]],
@@ -182,15 +183,27 @@ public class UberCoordinator: UIViewController, UITableViewDelegate, ScrollHeade
 
     public func tableView(_: UITableView, willDisplayHeaderView _: UIView, forSection section: Int) {
 
-        scrollViewController.selectedItemIndex = section
+        if self.section > section {
+            scrollViewController.selectedItemIndex = section
+            self.section = section
+        }
         print(section)
+    }
+
+    public func tableView(_: UITableView, didEndDisplayingHeaderView _: UIView, forSection section: Int) {
+        print("end display \(section)")
+
+        if self.section == section {
+            scrollViewController.selectedItemIndex = section + 1
+            self.section = section + 1
+        }
     }
 
     // MARK: - ScrollHeaderControllerDelegate
 
-    public func scrollHeaderController(scrollHeaderController: ScrollHeaderController, didTapItemAt index: Int) {
-
+    public func scrollHeaderController(scrollHeaderController _: ScrollHeaderController, didTapItemAt index: Int) {
         sectionTableViewController.tableView.scrollToRow(at: IndexPath(row: 0, section: index), at: .top, animated: true)
+            section = index
     }
 }
 
