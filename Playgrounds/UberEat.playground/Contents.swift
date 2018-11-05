@@ -16,7 +16,7 @@ public class SectionTableViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.defaultReuseIdentifier)
 
         //tableView.delegate
     }
@@ -32,7 +32,7 @@ public class SectionTableViewController: UITableViewController {
     }
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.defaultReuseIdentifier, for: indexPath)
 
         cell.textLabel?.text = sections[indexPath.section].values.first?[indexPath.row]
 
@@ -55,7 +55,6 @@ public class ScrollHeaderController: UIViewController {
 
     public var items = [String]() {
         didSet {
-            // stackView.arrangedSubviews.map($0.remove)
 
             for item in items {
                 let label = UILabel()
