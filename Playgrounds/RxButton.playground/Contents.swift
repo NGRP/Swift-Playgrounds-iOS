@@ -58,9 +58,11 @@ public class ButtonsViewController: UIViewController {
 
         stackView.addArrangedSubview(button)
 
+        bindViewModel()
+
         view.anchor(view: stackView)
 
-        bindViewModel()
+        //bindViewModel()
 
     }
 

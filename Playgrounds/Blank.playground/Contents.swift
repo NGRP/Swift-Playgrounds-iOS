@@ -46,13 +46,6 @@ public class ImageAndTextTableViewCell: UITableViewCell {
         contentView.anchor(view: stackView)
         contentView.backgroundColor = UIColor.red
     }
-
-//    public override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        stackView.frame = bounds
-//
-//    }
 }
 
 let frame = CGRect(x: 0, y: 0, width: 320, height: 100)
