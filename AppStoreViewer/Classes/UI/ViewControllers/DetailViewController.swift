@@ -38,10 +38,14 @@ public class DetailViewController: UIViewController {
 
         view.backgroundColor = UIColor.white
 
+        scrollView.preservesSuperviewLayoutMargins = true
+
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .fill
+
         stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.preservesSuperviewLayoutMargins = true
 
         scrollView.addSubview(stackView)
         // Use safe anchors = false
@@ -49,7 +53,7 @@ public class DetailViewController: UIViewController {
 
         view.addSubview(scrollView)
 
-        anchor(view: scrollView)
+        anchor(view: scrollView, useSafeAnchors: false)
 
         // Contrainte supplémentaire pour scroller verticalement uniquement
         stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true

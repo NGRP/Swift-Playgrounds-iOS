@@ -39,10 +39,12 @@ public class ImageAndTextView: UIView {
         stackView.spacing = 5
 
         stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        stackView.preservesSuperviewLayoutMargins = true
 
         stackView.addArrangedSubview(label)
         stackView.addArrangedSubview(rightImageView)
+
+        rightImageView.widthAnchor.constraint(equalTo: rightImageView.heightAnchor, multiplier: 1.0).isActive = true
 
         addSubview(stackView)
 

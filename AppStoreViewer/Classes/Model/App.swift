@@ -13,4 +13,3 @@ public struct App {
     let summary: String
     let thumbImageUrl: String
 }
-
