@@ -8,6 +8,20 @@
 
 import Foundation
 
+public enum AppType: String {
+    case paid = "Paid"
+    case free = "Free"
+
+    var appStoreRessourceURL: String {
+        switch self {
+        case .paid:
+            return "https://itunes.apple.com/us/rss/toppaidapplications"
+        case .free:
+            return "https://itunes.apple.com/us/rss/topfreeapplications"
+        }
+    }
+}
+
 public class AppStoreRessource: DataFetching {
 
     private struct ServerResponse: Decodable {
@@ -18,9 +32,11 @@ public class AppStoreRessource: DataFetching {
         let entry: [App]
     }
 
-    public func getTopApps(top: Int, completion: @escaping ([App], Error?) -> Void) {
+    public func getApps(top: Int, appType: AppType, completion: @escaping ([App], Error?) -> Void) {
 
-        let urlString = "https://itunes.apple.com/fr/rss/toppaidapplications/limit=\(top)/json"
+        let limitString = "/limit=\(top)/json"
+
+        let urlString = appType.appStoreRessourceURL + limitString
 
         let url = URL(string: urlString)
 

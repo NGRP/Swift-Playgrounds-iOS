@@ -15,7 +15,6 @@ public protocol Listable {
 }
 
 class ListViewController: UITableViewController {
-
     // MARK: - Variables
 
     public var list = [Listable]() {
@@ -33,6 +32,8 @@ class ListViewController: UITableViewController {
         tableView.register(ImageAndTextTableViewCell.self, forCellReuseIdentifier: ImageAndTextTableViewCell.defaultReuseIdentifier)
     }
 
+    // MARK: - UITableViewDataSource
+
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return list.count
     }
@@ -44,7 +45,7 @@ class ListViewController: UITableViewController {
 
         if let imageCell = cell as? ImageAndTextTableViewCell {
             imageCell.layout.label.text = element.text
-            imageCell.layout.rightImageView.url = URL(string:element.imageUrl)
+            imageCell.layout.rightImageView.url = URL(string: element.imageUrl)
         }
 
         return cell

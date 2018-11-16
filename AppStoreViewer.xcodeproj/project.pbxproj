@@ -44,6 +44,10 @@
 		A78E827F217771A9007C5FB5 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E827D217771A9007C5FB5 /* DataFetching.swift */; };
 		A78E8281217771D1007C5FB5 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E8280217771D1007C5FB5 /* AppStoreRessource.swift */; };
 		A78E8282217771D1007C5FB5 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E8280217771D1007C5FB5 /* AppStoreRessource.swift */; };
+		A792D625219EC04800FA3451 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A792D624219EC04800FA3451 /* SegmentedViewController.swift */; };
+		A792D626219EC04800FA3451 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A792D624219EC04800FA3451 /* SegmentedViewController.swift */; };
+		A792D628219EC10100FA3451 /* RootAppsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A792D627219EC10100FA3451 /* RootAppsCoordinator.swift */; };
+		A792D629219EC10100FA3451 /* RootAppsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A792D627219EC10100FA3451 /* RootAppsCoordinator.swift */; };
 		A7FA26FD218755080021ECCB /* playgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA26FC218755080021ECCB /* playgroundController.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +92,8 @@
 		A78E827A2177717A007C5FB5 /* App+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Decodable.swift"; sourceTree = "<group>"; };
 		A78E827D217771A9007C5FB5 /* DataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetching.swift; sourceTree = "<group>"; };
 		A78E8280217771D1007C5FB5 /* AppStoreRessource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreRessource.swift; sourceTree = "<group>"; };
+		A792D624219EC04800FA3451 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
+		A792D627219EC10100FA3451 /* RootAppsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppsCoordinator.swift; sourceTree = "<group>"; };
 		A7FA26FC218755080021ECCB /* playgroundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playgroundController.swift; sourceTree = "<group>"; };
 		A7FA26FF218758EB0021ECCB /* UberEat.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UberEat.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -154,6 +160,7 @@
 			children = (
 				A7304C072180C542003CAE94 /* ListViewController.swift */,
 				A737B34B2181C19B004B3E76 /* DetailViewController.swift */,
+				A792D624219EC04800FA3451 /* SegmentedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				A7304C0D2180C950003CAE94 /* AppsViewCoordinator.swift */,
+				A792D627219EC10100FA3451 /* RootAppsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -402,6 +410,7 @@
 				A78E827E217771A9007C5FB5 /* DataFetching.swift in Sources */,
 				A717CE1621777E0000B5A8A2 /* ReusableView.swift in Sources */,
 				A7304C012180C4B9003CAE94 /* DownloadImageView.swift in Sources */,
+				A792D625219EC04800FA3451 /* SegmentedViewController.swift in Sources */,
 				A7304C0E2180C950003CAE94 /* AppsViewCoordinator.swift in Sources */,
 				A7304C0B2180C589003CAE94 /* App+Listable.swift in Sources */,
 				A717CE1421777E0000B5A8A2 /* UIViewController+Anchor.swift in Sources */,
@@ -416,6 +425,7 @@
 				A78E8281217771D1007C5FB5 /* AppStoreRessource.swift in Sources */,
 				A78E82272177693E007C5FB5 /* AppDelegate.swift in Sources */,
 				A76AAC94218205E800F37388 /* UIImage+Color.swift in Sources */,
+				A792D628219EC10100FA3451 /* RootAppsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +444,7 @@
 				A78E8279217770B2007C5FB5 /* App.swift in Sources */,
 				A78E827C2177717A007C5FB5 /* App+Decodable.swift in Sources */,
 				A717CE1521777E0000B5A8A2 /* UIViewController+Anchor.swift in Sources */,
+				A792D626219EC04800FA3451 /* SegmentedViewController.swift in Sources */,
 				A717CE1721777E0000B5A8A2 /* ReusableView.swift in Sources */,
 				A7304C022180C4B9003CAE94 /* DownloadImageView.swift in Sources */,
 				A7304C0C2180C589003CAE94 /* App+Listable.swift in Sources */,
@@ -448,6 +459,7 @@
 				A737B34D2181C19B004B3E76 /* DetailViewController.swift in Sources */,
 				A7304C062180C4FD003CAE94 /* ImageAndTextTableViewCell.swift in Sources */,
 				A717CE1121777E0000B5A8A2 /* UIView+Anchor.swift in Sources */,
+				A792D629219EC10100FA3451 /* RootAppsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

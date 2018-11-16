@@ -9,11 +9,17 @@
 import UIKit
 
 public class AppsViewCoordinator: UIViewController, UITableViewDelegate {
-    // MARK: - Variables
+    // MARK: - Public Variables
+
+    public var appType: AppType = .free {
+        didSet {
+            title = appType.rawValue
+        }
+    }
+
+    // MARK: - Private Variables
 
     private let appsViewController = ListViewController()
-
-    private lazy var navController = UINavigationController(rootViewController: appsViewController)
 
     private var apps = [App]()
 
@@ -22,13 +28,18 @@ public class AppsViewCoordinator: UIViewController, UITableViewDelegate {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = appType.rawValue
         appsViewController.tableView.delegate = self
 
-        add(asChildViewController: navController)
+        add(asChildViewController: appsViewController)
+    }
+
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         let ressource = AppStoreRessource()
 
-        ressource.getTopApps(top: 100) { apps, _ in
+        ressource.getApps(top: 100, appType: appType) { apps, _ in
             //
             self.apps = apps
             self.appsViewController.list = apps
@@ -43,6 +54,6 @@ public class AppsViewCoordinator: UIViewController, UITableViewDelegate {
         let detail = apps[indexPath.row]
 
         detailViewController.detail = detail
-        navController.pushViewController(detailViewController, animated: true)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
