@@ -22,7 +22,13 @@ public enum AppType: String {
     }
 }
 
-public class AppStoreRessource: DataFetching {
+public class AppStoreRessource {
+
+    init(dataFetcher: DataFetching = NetworkDataFetcher()) {
+        self.dataFetcher = dataFetcher
+    }
+
+    private let dataFetcher: DataFetching
 
     private struct ServerResponse: Decodable {
         let feed: Feed
@@ -40,7 +46,7 @@ public class AppStoreRessource: DataFetching {
 
         let url = URL(string: urlString)
 
-        fetchData(url: url!) { (data, dataError) in
+        dataFetcher.fetchData(url: url!) { (data, dataError) in
 
             var apps = [App]()
             var parseError = dataError

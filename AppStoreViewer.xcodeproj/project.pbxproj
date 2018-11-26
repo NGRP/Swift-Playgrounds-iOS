@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A712AC9F21A8078B00ABB08D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712AC9E21A8078B00ABB08D /* NetworkDataFetcher.swift */; };
+		A712ACA021A80A6200ABB08D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712AC9E21A8078B00ABB08D /* NetworkDataFetcher.swift */; };
 		A717CE1021777E0000B5A8A2 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717CE0C21777E0000B5A8A2 /* UIView+Anchor.swift */; };
 		A717CE1121777E0000B5A8A2 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717CE0C21777E0000B5A8A2 /* UIView+Anchor.swift */; };
 		A717CE1221777E0000B5A8A2 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717CE0D21777E0000B5A8A2 /* UIViewController+Container.swift */; };
@@ -62,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A712AC9E21A8078B00ABB08D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		A717CE0C21777E0000B5A8A2 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		A717CE0D21777E0000B5A8A2 /* UIViewController+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
 		A717CE0E21777E0000B5A8A2 /* UIViewController+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Anchor.swift"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		A7304C112180CB5C003CAE94 /* AppDetail.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AppDetail.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A737B3482181C021004B3E76 /* ImageAndTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndTextView.swift; sourceTree = "<group>"; };
 		A737B34B2181C19B004B3E76 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A74253F021A7EF5100C623B0 /* TDDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TDDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A76AAC93218205E800F37388 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		A77238E3217779710065B650 /* Blank.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Blank.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A78E82232177693E007C5FB5 /* AppStoreViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +245,7 @@
 				A77238E3217779710065B650 /* Blank.playground */,
 				A7304C112180CB5C003CAE94 /* AppDetail.playground */,
 				A7FA26FF218758EB0021ECCB /* UberEat.playground */,
+				A74253F021A7EF5100C623B0 /* TDDTest.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				A7304C0A2180C589003CAE94 /* App+Listable.swift */,
 				A78E827D217771A9007C5FB5 /* DataFetching.swift */,
 				A78E8280217771D1007C5FB5 /* AppStoreRessource.swift */,
+				A712AC9E21A8078B00ABB08D /* NetworkDataFetcher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				A717CE1621777E0000B5A8A2 /* ReusableView.swift in Sources */,
 				A7304C012180C4B9003CAE94 /* DownloadImageView.swift in Sources */,
 				A792D625219EC04800FA3451 /* SegmentedViewController.swift in Sources */,
+				A712AC9F21A8078B00ABB08D /* NetworkDataFetcher.swift in Sources */,
 				A7304C0E2180C950003CAE94 /* AppsViewCoordinator.swift in Sources */,
 				A7304C0B2180C589003CAE94 /* App+Listable.swift in Sources */,
 				A717CE1421777E0000B5A8A2 /* UIViewController+Anchor.swift in Sources */,
@@ -445,6 +452,7 @@
 				A78E827C2177717A007C5FB5 /* App+Decodable.swift in Sources */,
 				A717CE1521777E0000B5A8A2 /* UIViewController+Anchor.swift in Sources */,
 				A792D626219EC04800FA3451 /* SegmentedViewController.swift in Sources */,
+				A712ACA021A80A6200ABB08D /* NetworkDataFetcher.swift in Sources */,
 				A717CE1721777E0000B5A8A2 /* ReusableView.swift in Sources */,
 				A7304C022180C4B9003CAE94 /* DownloadImageView.swift in Sources */,
 				A7304C0C2180C589003CAE94 /* App+Listable.swift in Sources */,
